@@ -1,18 +1,16 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class PlayerControlScript : MonoBehaviour
 {
-    // Start is called before the first frame update
     public AudioClip PlayShoot;
     private float ShootWait = 0;
     void Start()
     {
-        
+        test t = new test("vvv");
+        t.bb = "fff";
+        Debug.Log(t.bb);
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (Input.GetKey(KeyCode.RightArrow)) GetComponent<Animator>().SetBool("Run", true);
@@ -23,7 +21,7 @@ public class PlayerControlScript : MonoBehaviour
             GetComponent<Animator>().SetTrigger("Shoot");
             GetComponent<AudioSource>().PlayOneShot(PlayShoot);
         }
-        if(ShootWait > 0)
+        if (ShootWait > 0)
         {
             ShootWait -= Time.deltaTime * 1;
         }
