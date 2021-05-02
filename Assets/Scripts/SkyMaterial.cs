@@ -13,6 +13,6 @@ public class SkyMaterial : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        GetComponent<SpriteRenderer>().material.SetTextureOffset("_MainTex", transform.position * 0.5f);
+        GetComponent<SpriteRenderer>().material.SetTextureOffset("_MainTex", transform.position * 0.2f);
     }
 }
